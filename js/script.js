@@ -1,6 +1,6 @@
 function initMap() {
 	var opt = {
-		center: {lat: 50.617470432064536, lng: 26.27430882247241},
+		center: { lat: 50.61980292268567, lng: 26.251496156650585 },
 		zoom: 13,
 		mapId: "b061204d7bd99792"
 	}
