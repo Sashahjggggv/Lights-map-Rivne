@@ -8,15 +8,7 @@
 	<title>Rivne Lights Map</title>
 </head>
 <body>
-	<!--The div element for the map -->
 	<div id="map" class="map"></div>
-
-	<!-- 
-	 The `defer` attribute causes the callback to execute after the full HTML
-	 document has been parsed. For non-blocking uses, avoiding race conditions,
-	 and consistent behavior across browsers, consider loading using Promises
-	 with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-	-->
 	<script src="js/script.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWL2Cp_rDpY0EtgIYNRyeUlUdm1IiQ4WQ&callback=initMap&v=weekly" async defer></script>
 </body>
