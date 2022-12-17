@@ -60,12 +60,11 @@ svg.btn-icon {
 		top: 8px;
 		left: 50%;
 		transform: translatex(-50%);
-		border-radius: 50%;
 		box-shadow: 0px 0px 20px 12px #fff;
 	}
 
 	&__block-alarm-anable {
-		width: 100px;
+		width: fit-content;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -157,9 +156,22 @@ svg.btn-icon {
 	@media (max-width: 767px) {
 		width: 98%;
 		height: 50px;
-		top: 91.8%;
+		top: 10px;
 		left: 50%;
 		transform: translateX(-50%);
+
+		&__block-more {
+			top: 50px;
+		}
+		&__alert-text {
+			display: none;
+		}
+		&__alert-icon {
+			margin: 0 0 5px 0;
+		}
+		&__shadow-light {
+			box-shadow: 0px 0px 13px 8px #fff;
+		}
 	}
 	@media (max-width: 500px) {
 		padding: 10px 15px 10px 115px;
@@ -167,10 +179,8 @@ svg.btn-icon {
 		&__alarm-disable-icon {margin-left: 0px !important;}
 		&__logo {left: 15px;}
 	}
-	@media (max-width: 375px) {
-		justify-content: end;
-		&__block-alarm-disable, 
-		&__block-alarm-anable {display: none;}
+	@media (max-width: 390px) {
+		&__alarm-disable-text {display: none;}
 	}
 }
 
@@ -186,10 +196,10 @@ svg.btn-icon {
 	display: none;
 	&.active {display: block !important;}
 	@media (max-width: 767px) {
-		top: 10px;
+		top: 70px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 95%;
+		width: 98%;
 		min-width: 0;
 	}
 }
@@ -207,23 +217,23 @@ svg.btn-icon {
 
 @keyframes alert {
 	0% {
-		top: 2px;
+		top: -3px;
 		right: 15px;
 	}
 	25% {
-		top: 2px;
+		top: -3px;
 		right: 4px;
 	}
 	50% {
-		top: -10px;
+		top: -15px;
 		right: 15px;
 	}
 	75% {
-		top: 2px;
+		top: -3px;
 		right: 25px;
 	}
 	100% {
-		top: 2px;
+		top: -3px;
 		right: 15px;
 	}
 }
