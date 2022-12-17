@@ -105,12 +105,12 @@ svg.btn-icon {
   cursor: pointer;
 }
 
-.sidebar {
+.header {
   position: fixed;
   height: 70px;
   width: 70%;
-  top: 20px;
-  left: 30px;
+  top: 10px;
+  left: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,29 +119,29 @@ svg.btn-icon {
   background: rgba(11, 12, 16, 0.9);
   border-radius: 10px;
 }
-.sidebar__btns > * {
+.header__btns > * {
   margin-left: 25px;
 }
-.sidebar__btns > *:first-child {
+.header__btns > *:first-child {
   margin: 0;
 }
-.sidebar__logo {
+.header__logo {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 20px;
 }
-.sidebar__btn-dark-light {
+.header__btn-dark-light {
   position: relative;
 }
-.sidebar__shadow-light {
+.header__shadow-light {
   position: absolute;
   top: 8px;
   left: 50%;
   transform: translatex(-50%);
   box-shadow: 0px 0px 20px 12px #fff;
 }
-.sidebar__block-alarm-anable {
+.header__block-alarm-anable {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -149,20 +149,25 @@ svg.btn-icon {
   justify-content: space-between;
   align-items: center;
 }
-.sidebar__alert-text {
+.header__alert-text {
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
   color: red;
 }
-.sidebar__alert-icon {
+.header__alert-icon {
   margin-left: 10px;
   width: 30px;
   height: 30px;
   position: relative;
   z-index: 1;
 }
-.sidebar__shadow-alert {
+@media (min-width: 767px) {
+  .header__btn-search {
+    display: none;
+  }
+}
+.header__shadow-alert {
   position: absolute;
   box-shadow: 0 0 7px 7px red;
   -webkit-animation-name: alert;
@@ -175,12 +180,12 @@ svg.btn-icon {
           animation-iteration-count: infinite;
   position: relative;
 }
-.sidebar__block-alarm-disable {
+.header__block-alarm-disable {
   display: flex;
   align-items: center;
   display: none;
 }
-.sidebar__alarm-disable-text {
+.header__alarm-disable-text {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -189,13 +194,13 @@ svg.btn-icon {
   font-weight: 600;
   color: green;
 }
-.sidebar__alarm-disable-icon {
+.header__alarm-disable-icon {
   margin-left: 10px;
   fill: green;
   width: 30px;
   height: 30px;
 }
-.sidebar__block-more {
+.header__block-more {
   display: none;
   border-radius: 10px;
   padding: 10px 0;
@@ -206,22 +211,22 @@ svg.btn-icon {
   right: 0;
   border: 1px solid #ffb800;
 }
-.sidebar__block-more.active {
+.header__block-more.active {
   display: block;
 }
-.sidebar__block-more ul {
+.header__block-more ul {
   width: 90%;
   margin: 0 0 0 50%;
   transform: translateX(-50%);
 }
-.sidebar__block-more a {
+.header__block-more a {
   color: #fff;
   padding: 10px 0;
   width: 100%;
   position: relative;
   margin-bottom: 6px;
 }
-.sidebar__block-more a::after {
+.header__block-more a::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -229,46 +234,46 @@ svg.btn-icon {
   width: 100%;
   border-bottom: 1px solid #ffb800;
 }
-.sidebar__block-more a:last-child::after {
+.header__block-more a:last-child::after {
   display: none;
 }
 @media (max-width: 767px) {
-  .sidebar {
+  .header {
     width: 98%;
     height: 50px;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
-  .sidebar__block-more {
+  .header__block-more {
     top: 50px;
   }
-  .sidebar__alert-text {
+  .header__alert-text {
     display: none;
   }
-  .sidebar__alert-icon {
+  .header__alert-icon {
     margin: 0 0 5px 0;
   }
-  .sidebar__shadow-light {
+  .header__shadow-light {
     box-shadow: 0px 0px 13px 8px #fff;
   }
 }
 @media (max-width: 500px) {
-  .sidebar {
+  .header {
     padding: 10px 15px 10px 115px;
   }
-  .sidebar__btns > * {
+  .header__btns > * {
     margin-left: 15px;
   }
-  .sidebar__alarm-disable-icon {
+  .header__alarm-disable-icon {
     margin-left: 0px !important;
   }
-  .sidebar__logo {
+  .header__logo {
     left: 15px;
   }
 }
 @media (max-width: 390px) {
-  .sidebar__alarm-disable-text {
+  .header__alarm-disable-text {
     display: none;
   }
 }
@@ -276,10 +281,9 @@ svg.btn-icon {
 .alerts-map {
   position: absolute;
   top: 90px;
-  left: 30px;
+  left: 10px;
   z-index: 2;
-  width: 50%;
-  min-width: 500px;
+  width: 500px;
   border-radius: 10px;
   background: rgba(11, 12, 16, 0.9);
   display: none;
@@ -356,6 +360,123 @@ svg.btn-icon {
     right: 15px;
   }
 }
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  font-family: Roboto;
+  padding: 0;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 27%;
+  height: 70px;
+  z-index: 3;
+  border-radius: 10px;
+  background: rgba(11, 12, 16, 0.9);
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+}
+@media (max-width: 767px) {
+  #pac-input {
+    top: 70px;
+    height: 50px;
+    width: 98%;
+    right: 50%;
+    transform: translateX(50%);
+    display: none;
+  }
+  #pac-input.active {
+    display: inline-block;
+  }
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
+
 .map {
   width: 100%;
   height: 100%;

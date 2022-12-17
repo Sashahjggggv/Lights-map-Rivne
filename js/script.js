@@ -39,56 +39,6 @@ function initMap() {
 				{ lat: 50.63465652885336, lng: 26.234105247757494  },
 				{ lat: 50.63476678341832, lng: 26.233502632940905 },
 				{ lat: 50.63475943312941, lng: 26.231712171625883 },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
 			],
 			"#FF0000"
 		],
@@ -98,18 +48,6 @@ function initMap() {
 				{ lat: 50.64579107732509, lng: 26.208490276921683 },
 				{ lat: 50.644550665291156, lng: 26.208475787201323 },
 				{ lat: 50.64470227296296, lng: 26.204896826271504 },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
-				// { lat: lng:  },
 			],
 			"#FF0000"
 		],
@@ -969,10 +907,6 @@ function initMap() {
 				{ lat: 50.631998470046746, lng: 26.270381068742303 },
 				{ lat: 50.63197020662548, lng: 26.269864189999506 },
 				{ lat: 50.63275027083226, lng: 26.269730514463372 },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
 			],
 			"#FF0000",
 		],
@@ -1071,21 +1005,6 @@ function initMap() {
 				{ lat: 50.63714617927949, lng: 26.269824385865057 },
 				{ lat: 50.63733615135423, lng: 26.269581906987863 },
 				{ lat: 50.63685368109609, lng: 26.26870708123967 },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
 			],
 			"#FF0000",
 		],
@@ -1098,15 +1017,6 @@ function initMap() {
 				{ lat: 50.63996809781053, lng: 26.268776662938432 },
 				{ lat: 50.639320185564586, lng: 26.26721929982183 },
 				{ lat: 50.63703253113174, lng: 26.26787155942589 },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
 			],
 			"#FF0000",
 		],
@@ -2703,42 +2613,6 @@ function initMap() {
 				{ lat: 50.619155827674426, lng: 26.207809001470714 },
 				{ lat: 50.619326063358464, lng: 26.207733686039212 },
 				{ lat: 50.61906740379066, lng: 26.206012116121897 },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
-				// { lat: lng: },
 			],
 			"#008000",
 		],
@@ -3226,41 +3100,69 @@ function initMap() {
 		}).setMap(map);
 	});
 
-  // const contentString =
-  //   '<div id="content">' +
-  //   '<div id="siteNotice">' +
-  //   "</div>" +
-  //   '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
-  //   '<div id="bodyContent">' +
-  //   "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
-  //   "sandstone rock formation in the southern part of the " +
-  //   "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
-  //   "south west of the nearest large town, Alice Springs; 450&#160;km " +
-  //   "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
-  //   "features of the Uluru - Kata Tjuta National Park. Uluru is " +
-  //   "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
-  //   "Aboriginal people of the area. It has many springs, waterholes, " +
-  //   "rock caves and ancient paintings. Uluru is listed as a World " +
-  //   "Heritage Site.</p>" +
-  //   '<p>Attribution: Uluru, <a target="_blank" href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-  //   "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
-  //   "(last visited June 22, 2009).</p>" +
-  //   "</div>" +
-  //   "</div>";
-  // const infowindow = new google.maps.InfoWindow({
-  //   content: contentString,
-  //   ariaLabel: "Uluru",
-  // });
-  // const marker = new google.maps.Marker({
-  //   position: { lat: 50.61980292268567, lng: 26.251496156650585 },
-  //   map,
-  //   title: "Uluru (Ayers Rock)",
-  // });
+	
+  // Create the search box and link it to the UI element.
+  const input = document.getElementById("pac-input");
+  const searchBox = new google.maps.places.SearchBox(input);
 
-  // marker.addListener("click", () => {
-  //   infowindow.open({
-  //     anchor: marker,
-  //     map,
-  //   });
-  // });
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
+  });
+
+  let markers = [];
+
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener("places_changed", () => {
+    const places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    // Clear out the old markers.
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+
+    // For each place, get the icon, name and location.
+    const bounds = new google.maps.LatLngBounds();
+
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+
+      // Create a marker for each place.
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+        })
+      );
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+  });
 }
+
+window.initAutocomplete = initAutocomplete;

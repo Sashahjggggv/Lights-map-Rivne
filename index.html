@@ -5,50 +5,65 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script type="module" src="js-samples/index.ts"></script>
+
 	<title>Rivne Lights Map</title>
 </head>
 <body>
-	<aside class="sidebar">
-		<h1 title="Засновник" class="logo sidebar__logo">ALEX</h1>
-		<button class="sidebar__block-alarm-anable pointer alert-btn">
-			<h4 class="sidebar__alert-text">Тривога</h4>
-			<img src="img/free-icon-alarm-469654.png" alt="alert-icon" class="sidebar__alert-icon">
-			<div class="sidebar__shadow-alert"></div>
+	<!-- searchBox -->
+	<input id="pac-input" id="search" class="controls search-input" type="text" placeholder="Search Box" />
+
+	<!-- header -->
+	<header class="header">
+		<h1 title="Засновник" class="logo header__logo">ALEX</h1>
+		<button class="header__block-alarm-anable pointer alert-btn">
+			<h4 class="header__alert-text">Тривога</h4>
+			<img src="img/free-icon-alarm-469654.png" alt="alert-icon" class="header__alert-icon">
+			<div class="header__shadow-alert"></div>
 		</button>
-		<button class="sidebar__block-alarm-disable pointer alert-btn">
-			<div class="sidebar__alarm-disable-text">немає <br> тривоги</div>
-			<svg class="sidebar__alarm-disable-icon btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#228B22" class="bi bi-check2-circle" viewBox="0 0 16 16">
+		<button class="header__block-alarm-disable pointer alert-btn">
+			<div class="header__alarm-disable-text">немає <br> тривоги</div>
+			<svg class="header__alarm-disable-icon btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#228B22" class="bi bi-check2-circle" viewBox="0 0 16 16">
 				<path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
 				<path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
 			</svg>
 		</button>
-		<div class="sidebar__btns">
-			<a target="_blank" href="#" class="sidebar__punkty-nezlamnosty pointer">
-				<svg class="sidebar__icon-punkty-nezlamnosty btn-icon bi bi-geo-alt-fill" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16">
+		<div class="header__btns">
+			<label for="search" class="header__btn-search">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" class="bi bi-search btn-icon" viewBox="0 0 16 16">
+					<title>Пошук</title>
+					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			</label>
+			<a target="_blank" href="#" class="header__punkty-nezlamnosty pointer">
+				<svg class="header__icon-punkty-nezlamnosty btn-icon bi bi-geo-alt-fill" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16">
 					<title>Пункти незламності</title>
 					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
 				</svg>
 			</a>
-			<a target="_blank" href="#" class="sidebar__map-shelters pointer">
+			<a target="_blank" href="#" class="header__map-shelters pointer">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-map btn-icon" viewBox="0 0 16 16">
 					<title>Карта укриттів</title>
 					<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
 				</svg>
 			</a>
-			<a class="sidebar__btn-dark-light pointer">
-				<div class="sidebar__shadow-light"></div>
+			<a class="header__btn-dark-light pointer">
+				<div class="header__shadow-light"></div>
 				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-lightbulb-fill btn-icon" viewBox="0 0 16 16">
 					<title>Light mode</title>
 					<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
 				</svg>
 			</a>
-			<a class="sidebar__info-icon pointer">
+			<a class="header__info-icon pointer">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-three-dots btn-icon" viewBox="0 0 16 16">
 					<title>More</title>
 					<path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
 				</svg>
 			</a>
-			<nav class="sidebar__block-more">
+			<nav class="header__block-more">
 				<ul>
 					<a href="#" target="_blank"><span>Про "Карту відключень світла Рівного"</span></a>
 					<a href="#" target="_blank"><span>Невірна інформація?</span></a>
@@ -56,7 +71,7 @@
 				</ul>
 			</nav>
 		</div>
-	</aside>
+	</header>
 	<div class="alerts-map">
 		<svg version="1.2" viewBox="0 0 4960.6 3507.9" xmlns="http://www.w3.org/2000/svg">
 			<rect x="36.698" y="60.324" width="4887.2" height="3387.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".33333" stroke-width="3.125"></rect>
@@ -251,6 +266,9 @@
 	<div class="hide__1 hide"></div>
 	<div class="hide__2 hide"></div>
 
+	<!-- search box -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly" defer ></script>
+
 	<div id="map" class="map"></div>
 	<script src="js/script.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWL2Cp_rDpY0EtgIYNRyeUlUdm1IiQ4WQ&callback=initMap&v=weekly" async defer></script>
@@ -263,8 +281,13 @@
 			});
 		});
 		$(document).ready(function() {
-			$('.sidebar__info-icon,.hide__2').click(function(event){
-				$('.sidebar__block-more,.hide__2').toggleClass('active');
+			$('.header__info-icon,.hide__2').click(function(event){
+				$('.header__block-more,.hide__2').toggleClass('active');
+			});
+		});
+		$(document).ready(function() {
+			$('.header__btn-search').click(function(event){
+				$('.search-input').toggleClass('active');
 			});
 		});
 	</script>
