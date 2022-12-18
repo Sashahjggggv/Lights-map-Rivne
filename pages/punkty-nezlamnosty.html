@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Карта відключень світла Рівного</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Пункти незламності Рівне</title>
 </head>
 <body>
+	
 	<!-- searchBox -->
-	<input id="pac-input" id="search" class="controls search-input" type="text" placeholder="Введіть адресу" />
+	<input id="pac-input" id="search" class="controls search-input" type="text" placeholder="Search Box" />
 
 	<!-- header -->
 	<header class="header">
-		<h1 title="Засновник" class="logo header__logo">ALEX</h1>
+		<a href="../index.html" title="Засновник" class="logo header__logo">ALEX</a>
 		<button class="header__block-alarm-anable pointer alert-btn">
 			<h4 class="header__alert-text">Тривога</h4>
-			<img src="img/free-icon-alarm-469654.png" alt="alert-icon" class="header__alert-icon">
+			<img src="../img/free-icon-alarm-469654.png" alt="alert-icon" class="header__alert-icon">
 			<div class="header__shadow-alert"></div>
 		</button>
 		<button class="header__block-alarm-disable pointer alert-btn">
@@ -33,13 +34,13 @@
 					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 				</svg>
 			</label>
-			<a href="pages/punkty-nezlamnosty.html" class="header__punkty-nezlamnosty pointer">
-				<svg class="header__icon-punkty-nezlamnosty btn-icon bi bi-geo-alt-fill" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16">
-					<title>Пункти незламності</title>
-					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+			<a href="../index.html" class="header__punkty-nezlamnosty pointer">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-lightbulb-fill btn-icon" viewBox="0 0 16 16">
+					<title>Карта відключень світла</title>
+					<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
 				</svg>
 			</a>
-			<a href="pages/map-shelter.html" class="header__map-shelters pointer">
+			<a href="map-shelter.html" class="header__map-shelters pointer">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-map btn-icon" viewBox="0 0 16 16">
 					<title>Карта укриттів</title>
 					<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
@@ -269,8 +270,9 @@
 
 	<div id="map" class="map"></div>
 	
-	<script src="js/script.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWL2Cp_rDpY0EtgIYNRyeUlUdm1IiQ4WQ&callback=initMap&v=weekly" async defer></script>
+
+	<script src="../js/punkty-nezlamnosty.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script>
@@ -287,6 +289,11 @@
 		$(document).ready(function() {
 			$('.header__btn-search').click(function(event){
 				$('.search-input').toggleClass('active');
+			});
+		});
+		$(document).ready(function() {
+			$('.header__btn-dark-light').click(function(event){
+				$('.dark-icon,.light-icon').toggleClass('active');
 			});
 		});
 		$(document).ready(function() {

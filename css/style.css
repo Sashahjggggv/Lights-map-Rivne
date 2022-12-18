@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -116,8 +117,12 @@ svg.btn-icon {
   align-items: center;
   padding: 15px 20px 15px 140px;
   z-index: 10;
-  background: rgba(11, 12, 16, 0.9);
+  background: rgba(47, 47, 162, 0.9);
   border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.header.dark-mode {
+  background: rgba(11, 12, 16, 0.9);
 }
 .header__btns > * {
   margin-left: 25px;
@@ -136,9 +141,9 @@ svg.btn-icon {
 }
 .header__shadow-light {
   position: absolute;
-  top: 8px;
+  top: 50%;
   left: 50%;
-  transform: translatex(-50%);
+  transform: translate(-50%, -50%);
   box-shadow: 0px 0px 20px 12px #fff;
 }
 .header__block-alarm-anable {
@@ -153,7 +158,7 @@ svg.btn-icon {
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
-  color: red;
+  color: #f64c72;
 }
 .header__alert-icon {
   margin-left: 10px;
@@ -205,7 +210,8 @@ svg.btn-icon {
   border-radius: 10px;
   padding: 10px 0;
   width: 200px;
-  background: rgba(11, 12, 16, 0.9);
+  transition: all 0.5s ease;
+  background: rgba(47, 47, 162, 0.9);
   position: absolute;
   top: 70px;
   right: 0;
@@ -213,6 +219,9 @@ svg.btn-icon {
 }
 .header__block-more.active {
   display: block;
+}
+.header__block-more.dark-mode {
+  background: rgba(11, 12, 16, 0.9);
 }
 .header__block-more ul {
   width: 90%;
@@ -285,8 +294,12 @@ svg.btn-icon {
   z-index: 2;
   width: 500px;
   border-radius: 10px;
-  background: rgba(11, 12, 16, 0.9);
+  transition: all 0.5s ease;
+  background: rgba(47, 47, 162, 0.9);
   display: none;
+}
+.alerts-map.dark-mode {
+  background: rgba(11, 12, 16, 0.9);
 }
 .alerts-map.active {
   display: block !important;
@@ -438,7 +451,9 @@ body {
   height: 70px;
   z-index: 3;
   border-radius: 10px;
-  background: rgba(11, 12, 16, 0.9);
+  transition: all 0.5s ease;
+  background: rgba(0, 0, 139, 0.8);
+  background: rgba(47, 47, 162, 0.9);
   color: #fff;
   font-family: Roboto;
   font-size: 20px;
@@ -446,6 +461,9 @@ body {
   margin-left: 12px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
+}
+#pac-input.dark-mode {
+  background: rgba(11, 12, 16, 0.9);
 }
 @media (max-width: 767px) {
   #pac-input {
@@ -477,7 +495,25 @@ body {
   width: 345px;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .map {
   width: 100%;
   height: 100%;
+}
+
+.dark-icon {
+  display: block;
+}
+.dark-icon.active {
+  display: none;
+}
+
+.light-icon {
+  display: none;
+}
+.light-icon.active {
+  display: block;
 }

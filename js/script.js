@@ -1,12 +1,21 @@
 function initMap() {
-	const opt = {
+
+  const map = new google.maps.Map(document.getElementById("map"), {
 		center: { lat: 50.61980292268567, lng: 26.251496156650585 },
 		zoom: 13,
-		// mapId: "b061204d7bd99792",
-		mapId: "99ef70356ee7ffe7", // DARK them; "#ff0" -- DARK THEME COLOR ZONE
-	}
+		mapId: "b061204d7bd99792",
+		// mapId: "99ef70356ee7ffe7", // DARK them; "#ff0" -- DARK THEME COLOR ZONE
+    mapTypeId: "roadmap",
+  });
 
-	var map = new google.maps.Map(document.getElementById("map"), opt);
+	// const opt = {
+	// 	center: { lat: 50.61980292268567, lng: 26.251496156650585 },
+	// 	zoom: 13,
+	// 	// mapId: "b061204d7bd99792",
+	// 	mapId: "99ef70356ee7ffe7", // DARK them; "#ff0" -- DARK THEME COLOR ZONE
+	// }
+
+	// const map = new google.maps.Map(document.getElementById("map"), opt);
 
 	let arreyCords = [
 		[
@@ -3105,7 +3114,7 @@ function initMap() {
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
 
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   // Bias the SearchBox results towards current map's viewport.
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());

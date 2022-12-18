@@ -1,8 +1,20 @@
 @import '_nullstyle.scss';
 @import '_style-header.scss';
 @import '_style-searchLine.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {font-family: 'Lato', sans-serif;}
 
 .map {
 	width: 100%;
 	height: 100%;
+}
+
+.dark-icon {
+	display: block;
+	&.active {display: none;}
+}
+.light-icon {
+	display: none;
+	&.active {display: block;}
 }
