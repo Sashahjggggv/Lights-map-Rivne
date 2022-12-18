@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
       -ms-user-select: none;
           user-select: none;
   position: relative;
+  cursor: pointer;
 }
 
 a {
@@ -90,12 +91,21 @@ a {
 }
 
 svg.btn-icon {
+  cursor: pointer;
   height: 30px;
 }
 @media (max-width: 767px) {
   svg.btn-icon {
     height: 22px;
   }
+}
+
+.hover-btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hover-btn:hover {
+  transform: scale(1.1);
 }
 
 .alert-btn {
@@ -153,6 +163,11 @@ svg.btn-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.2s ease;
+  display: none;
+}
+.header__block-alarm-anable:hover {
+  transform: translateY(-2px);
 }
 .header__alert-text {
   font-weight: 600;
@@ -188,7 +203,10 @@ svg.btn-icon {
 .header__block-alarm-disable {
   display: flex;
   align-items: center;
-  display: none;
+  transition: all 0.2s ease;
+}
+.header__block-alarm-disable:hover {
+  transform: translateY(-2px);
 }
 .header__alarm-disable-text {
   width: -webkit-fit-content;

@@ -5,7 +5,9 @@ function initMap() {
 		zoom: 13,
 		mapId: "b061204d7bd99792",
 		// mapId: "99ef70356ee7ffe7", // DARK them; "#ff0" -- DARK THEME COLOR ZONE
-    mapTypeId: "roadmap",
+    // mapTypeId: "hybrid", // Супутник 
+		mapTypeId: 'roadmap',
+		fullscreenControl: false,
   });
 
 	// const opt = {
@@ -3109,69 +3111,36 @@ function initMap() {
 		}).setMap(map);
 	});
 
+	const zone = new google.maps.Polygon({
+		paths: [
+			{ lat: 50.596902813913324, lng: 26.052348706000274 },
+			{ lat: 50.596150007400745, lng: 26.076808675933776 },
+			{ lat: 50.61703591974782, lng: 26.07754988713909 },
+			{ lat: 50.6190111341837, lng: 26.040489326633786 },
+		],
+		strokeColor: "#FF0000",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#FF0000",
+    fillOpacity: 0.35,
+	});
+
+	zone.setMap(map);
+
+	const infowindow = new google.maps.InfoWindow({
+    content: '<h1>Вересневе</h1><p>Село</p>',
+    ariaLabel: "Вересневе",
+		position: { lat: 50.59351508987404, lng: 26.162492688763255 },
+  });
+
 	
-  // Create the search box and link it to the UI element.
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
-
-  // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener("bounds_changed", () => {
-    searchBox.setBounds(map.getBounds());
+  zone.addListener("click", () => {
+    infowindow.open({
+      anchor: zone,
+      map,
+    });
   });
 
-  let markers = [];
-
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener("places_changed", () => {
-    const places = searchBox.getPlaces();
-
-    if (places.length == 0) {
-      return;
-    }
-
-    // Clear out the old markers.
-    markers.forEach((marker) => {
-      marker.setMap(null);
-    });
-    markers = [];
-
-    // For each place, get the icon, name and location.
-    const bounds = new google.maps.LatLngBounds();
-
-    places.forEach((place) => {
-      if (!place.geometry || !place.geometry.location) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-
-      const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
-
-      // Create a marker for each place.
-      markers.push(
-        new google.maps.Marker({
-          map,
-          icon,
-          title: place.name,
-          position: place.geometry.location,
-        })
-      );
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-    map.fitBounds(bounds);
-  });
 }
 
-window.initAutocomplete = initAutocomplete;
+window.initMap = initMap;
