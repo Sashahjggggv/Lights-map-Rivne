@@ -3111,17 +3111,26 @@ function initMap() {
 		}).setMap(map);
 	});
 
+	let color1 = '#000';
+
 	const zone = new google.maps.Polygon({
 		paths: [
-			{ lat: 50.596902813913324, lng: 26.052348706000274 },
-			{ lat: 50.596150007400745, lng: 26.076808675933776 },
-			{ lat: 50.61703591974782, lng: 26.07754988713909 },
-			{ lat: 50.6190111341837, lng: 26.040489326633786 },
+			[
+				{ lat: 50.596902813913324, lng: 26.052348706000274 },
+				{ lat: 50.596150007400745, lng: 26.076808675933776 },
+				{ lat: 50.61703591974782, lng: 26.07754988713909 },
+				{ lat: 50.6190111341837, lng: 26.040489326633786 },
+			],
+			[
+				{ lat: 50.63189502134586, lng: 26.116685838035487 },
+				{ lat: 50.63377558547037, lng: 26.140404596758884 },
+				{ lat: 50.618446795809426, lng: 26.119057713907825 },
+			],
 		],
-		strokeColor: "#FF0000",
+		strokeColor: color1,
     strokeOpacity: 0.8,
     strokeWeight: 2,
-    fillColor: "#FF0000",
+    fillColor: color1,
     fillOpacity: 0.35,
 	});
 
@@ -3132,15 +3141,15 @@ function initMap() {
     ariaLabel: "Вересневе",
 		position: { lat: 50.59351508987404, lng: 26.162492688763255 },
   });
-
 	
   zone.addListener("click", () => {
-    infowindow.open({
-      anchor: zone,
-      map,
-    });
+		color1 = '#fff';
+    // infowindow.open({
+    //   anchor: zone,
+    //   map,
+    // });
+		$('.time-block_1').toggleClass('active');
   });
-
 }
 
 window.initMap = initMap;

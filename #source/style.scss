@@ -18,3 +18,51 @@ body {font-family: 'Lato', sans-serif;}
 	display: none;
 	&.active {display: block;}
 }
+
+.gm-ui-hover-effect span {
+	width: 20px !important;
+	height: 20px !important;
+	transform: translateX(-10px);
+}
+
+.time-block {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 5;
+	width: 500px;
+	height: 150px;
+	color: #fff;
+	display: none;
+	border-radius: 10px;
+	padding: 20px;
+	transition: all 0.5s ease;
+  background: rgba(47, 47, 162, 0.9);
+  &.dark-mode {background: rgba(11, 12, 16, 0.9);}
+	&.active {
+		display: block;
+	}
+
+	&__table {
+		width: 270px;
+		height: 100px;
+		width: 90%;
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+		& tr,
+		& td {
+			border: 1px solid #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		& td {
+			width: 16.666%;
+		}
+		& tr {
+			height: 50%;
+		}
+	}
+}
