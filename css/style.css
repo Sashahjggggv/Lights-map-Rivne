@@ -582,3 +582,10 @@ body {
 .time-block__table tr {
   height: 50%;
 }
+.time-block.hide {
+  display: none;
+}
+.time-block .content__paragraf {
+  font-weight: 700;
+  font-size: 20px;
+}
