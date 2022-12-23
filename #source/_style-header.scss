@@ -55,6 +55,8 @@ svg.btn-icon {
 	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
 	
 	&__btns {
+		display: flex;
+		
 		& > * {
 			margin-left: 25px;
 			&:first-child {margin: 0;}
@@ -114,12 +116,12 @@ svg.btn-icon {
 	&__map-icon {
 		display: none;
 		&.active {
-			display: inline-block;
+			display: flex;
 		}
 	}
 
 	&__sattelite {
-		display: inline-block;
+		display: flex;
 		&.active {
 			display: none;
 		}
@@ -178,10 +180,17 @@ svg.btn-icon {
 		}
 		& a {
 			color: #fff;
-			padding: 10px 0;
+			padding: 10px 0 10px 27px;
 			width: 100%;
 			position: relative;
 			margin-bottom: 6px;
+			align-items: center;
+			& svg {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
 			&::after {
 				content: '';
 				position: absolute;
@@ -198,37 +207,37 @@ svg.btn-icon {
 	&__map-light {
 		display: none;
 		&.punktsActive {
-			display: inline-block;
+			display: flex;
 		}
 		&.sheltersActive {
-			display: inline-block;
+			display: flex;
 		}
 		&.lightActive {
 			display: none;
 		}
 	}
 	&__punkty-nezlamnosty {
-		display: inline-block;
+		display: flwx;
 		&.punktsActive {
 			display: none;
 		}
 		&.sheltersActive {
-			display: inline-block;
+			display: flex;
 		}
 		&.lightActive {
-			display: inline-block;
+			display: flex;
 		}
 	}
 	&__map-shelters {
-		display: inline-block;
+		display: flex;
 		&.punktsActive {
-			display: inline-block;
+			display: flex;
 		}
 		&.sheltersActive {
 			display: none;
 		}
 		&.lightActive {
-			display: inline-block;
+			display: flex;
 		}
 	}
 
@@ -266,11 +275,21 @@ svg.btn-icon {
 	}
 }
 
+.mobile-first-btn {
+	@media (min-width:767px) {
+		display: none !important;
+	}
+}
+
 .mobile-none {
 	@media (max-width:767px) {
 		display: none !important;
 	}
 }
+
+// .mobile-default-none {
+// 	display: none !important;
+// }
 
 .alerts-map {
 	position: absolute;

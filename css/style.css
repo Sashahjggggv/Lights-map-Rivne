@@ -143,6 +143,9 @@ svg.btn-icon {
 .header.dark-mode {
   background: rgba(11, 12, 16, 0.9);
 }
+.header__btns {
+  display: flex;
+}
 .header__btns > * {
   margin-left: 25px;
 }
@@ -200,10 +203,10 @@ svg.btn-icon {
   display: none;
 }
 .header__map-icon.active {
-  display: inline-block;
+  display: flex;
 }
 .header__sattelite {
-  display: inline-block;
+  display: flex;
 }
 .header__sattelite.active {
   display: none;
@@ -269,10 +272,17 @@ svg.btn-icon {
 }
 .header__block-more a {
   color: #fff;
-  padding: 10px 0;
+  padding: 10px 0 10px 27px;
   width: 100%;
   position: relative;
   margin-bottom: 6px;
+  align-items: center;
+}
+.header__block-more a svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header__block-more a::after {
   content: "";
@@ -289,37 +299,37 @@ svg.btn-icon {
   display: none;
 }
 .header__map-light.punktsActive {
-  display: inline-block;
+  display: flex;
 }
 .header__map-light.sheltersActive {
-  display: inline-block;
+  display: flex;
 }
 .header__map-light.lightActive {
   display: none;
 }
 .header__punkty-nezlamnosty {
-  display: inline-block;
+  display: flwx;
 }
 .header__punkty-nezlamnosty.punktsActive {
   display: none;
 }
 .header__punkty-nezlamnosty.sheltersActive {
-  display: inline-block;
+  display: flex;
 }
 .header__punkty-nezlamnosty.lightActive {
-  display: inline-block;
+  display: flex;
 }
 .header__map-shelters {
-  display: inline-block;
+  display: flex;
 }
 .header__map-shelters.punktsActive {
-  display: inline-block;
+  display: flex;
 }
 .header__map-shelters.sheltersActive {
   display: none;
 }
 .header__map-shelters.lightActive {
-  display: inline-block;
+  display: flex;
 }
 @media (max-width: 767px) {
   .header {
@@ -360,6 +370,12 @@ svg.btn-icon {
 @media (max-width: 390px) {
   .header__alarm-disable-text {
     display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .mobile-first-btn {
+    display: none !important;
   }
 }
 
