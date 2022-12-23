@@ -26,6 +26,11 @@ svg.btn-icon {
 	&:hover {
 		transform: scale(1.1);
 	}
+	@media (max-width:767px) {
+		&:hover {
+			transform: scale(1);
+		}
+	}
 }
 
 .alert-btn {background: none;}
@@ -41,6 +46,7 @@ svg.btn-icon {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	user-select: none;
 	padding: 15px 20px 15px 140px;
 	z-index: 10;
   background: rgba(47, 47, 162, 0.9);
@@ -101,6 +107,20 @@ svg.btn-icon {
 
 	&__btn-search {
 		@media (min-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__map-icon {
+		display: none;
+		&.active {
+			display: inline-block;
+		}
+	}
+
+	&__sattelite {
+		display: inline-block;
+		&.active {
 			display: none;
 		}
 	}
@@ -175,12 +195,49 @@ svg.btn-icon {
 			}
 		}
 	}
+	&__map-light {
+		display: none;
+		&.punktsActive {
+			display: inline-block;
+		}
+		&.sheltersActive {
+			display: inline-block;
+		}
+		&.lightActive {
+			display: none;
+		}
+	}
+	&__punkty-nezlamnosty {
+		display: inline-block;
+		&.punktsActive {
+			display: none;
+		}
+		&.sheltersActive {
+			display: inline-block;
+		}
+		&.lightActive {
+			display: inline-block;
+		}
+	}
+	&__map-shelters {
+		display: inline-block;
+		&.punktsActive {
+			display: inline-block;
+		}
+		&.sheltersActive {
+			display: none;
+		}
+		&.lightActive {
+			display: inline-block;
+		}
+	}
 
 	@media (max-width: 767px) {
 		width: 98%;
 		height: 50px;
 		top: 10px;
 		left: 50%;
+		padding: 15px 20px 15px 90px;
 		transform: translateX(-50%);
 
 		&__block-more {
@@ -195,15 +252,23 @@ svg.btn-icon {
 		&__shadow-light {
 			box-shadow: 0px 0px 13px 8px #fff;
 		}
+		&__logo {
+			font-size: 25px;
+		}
 	}
 	@media (max-width: 500px) {
-		padding: 10px 15px 10px 115px;
 		&__btns > * {margin-left: 15px;}
 		&__alarm-disable-icon {margin-left: 0px !important;}
 		&__logo {left: 15px;}
 	}
 	@media (max-width: 390px) {
 		&__alarm-disable-text {display: none;}
+	}
+}
+
+.mobile-none {
+	@media (max-width:767px) {
+		display: none !important;
 	}
 }
 

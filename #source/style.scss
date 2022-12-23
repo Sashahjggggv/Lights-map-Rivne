@@ -30,8 +30,8 @@ body {font-family: 'Lato', sans-serif;}
 	bottom: 10px;
 	left: 10px;
 	z-index: 5;
-	width: 500px;
-	height: 150px;
+	width: 600px;
+	height: 200px;
 	color: #fff;
 	display: none;
 	border-radius: 10px;
@@ -39,8 +39,15 @@ body {font-family: 'Lato', sans-serif;}
 	transition: all 0.5s ease;
   background: rgba(47, 47, 162, 0.9);
   &.dark-mode {background: rgba(11, 12, 16, 0.9);}
-	&.active {
-		display: block;
+	&.active {display: block;}
+	&.hide {display: none;}
+
+	&__hide {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 2;
+		background: none;
 	}
 
 	&__table {
@@ -65,6 +72,57 @@ body {font-family: 'Lato', sans-serif;}
 			height: 50%;
 		}
 	}
+	&__block-text {
+		display: flex;
+		width: 95%;
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 500;
+		margin-right: 15px;
+	}
+	&__description {
+		font-size: 12px;
+		font-weight: 300;
+	}
+	&__lamp-icon {
+		width: 30px;
+	}
+	&__times {
+		text-align: center;
+	}
+	&__flex-box {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 95%;
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__mini-flex-box {
+		position: relative;
+		height: 100%;
+		width: 16.666%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background: #fff;
+		}
+		&:last-child::after {
+			content: '';
+			display: none;
+		}
+	}
 
 	&.hide {
 		display: none;
@@ -74,6 +132,24 @@ body {font-family: 'Lato', sans-serif;}
 		&__paragraf {
 			font-weight: 700;
 			font-size: 20px;
+		}
+	}
+
+	@media (max-width:767px) {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 98%;	
+		height: 150px;
+		padding: 10px;
+
+		&__flex-box {
+			height: 80px;
+		}
+		&__times {
+			font-size: 14px;
+			bottom: 10px;
 		}
 	}
 }

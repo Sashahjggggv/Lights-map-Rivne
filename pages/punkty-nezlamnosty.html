@@ -34,13 +34,15 @@
 					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 				</svg>
 			</label>
-			<a href="../index.html" class="header__punkty-nezlamnosty pointer hover-btn">
+			<!-- href="../index.html" -->
+			<a  id="hide-punkts" class="header__punkty-nezlamnosty pointer hover-btn">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-lightbulb-fill btn-icon" viewBox="0 0 16 16">
 					<title>Карта відключень світла</title>
 					<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
 				</svg>
 			</a>
-			<a href="map-shelter.html" class="header__map-shelters pointer hover-btn">
+			<!-- href="map-shelter.html" -->
+			<a  id="show-punkts" class="header__map-shelters pointer hover-btn">
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  viewBox="0 0 1280.000000 1194.000000">
 					<title>Карта укриттів</title>
 					<g transform="translate(0.000000,1194.000000) scale(0.100000,-0.100000)"
@@ -314,7 +316,7 @@
 	<div id="map" class="map"></div>
 	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWL2Cp_rDpY0EtgIYNRyeUlUdm1IiQ4WQ&callback=initMap&v=weekly" async defer></script>
-
+	<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 	<script src="../js/punkty-nezlamnosty.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>

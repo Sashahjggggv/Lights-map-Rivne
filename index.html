@@ -33,14 +33,21 @@
 					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 				</svg>
 			</label>
-			<a href="pages/punkty-nezlamnosty.html" class="header__punkty-nezlamnosty pointer hover-btn">
+
+			<a id="mapLight" class="header__map-light mobile-none pointer hover-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-lightbulb-fill btn-icon" viewBox="0 0 16 16">
+					<title>Карта відключень світла</title>
+					<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+				</svg>
+			</a>
+			<a id="punkts" class="header__punkty-nezlamnosty mobile-none pointer hover-btn">
 				<svg class="header__icon-punkty-nezlamnosty btn-icon bi bi-geo-alt-fill" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16">
 					<title>Пункти незламності</title>
 					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
 				</svg>
 			</a>
-			<a href="pages/map-shelter.html" class="header__map-shelters pointer hover-btn">
-				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  viewBox="0 0 1280.000000 1194.000000">
+			<a id="shelters" class="header__map-shelters mobile-none pointer hover-btn">
+				<svg version="1.0" class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  viewBox="0 0 1280.000000 1194.000000">
 					<title>Карта укриттів</title>
 					<g transform="translate(0.000000,1194.000000) scale(0.100000,-0.100000)"
 					fill="#ffffff" stroke="none">
@@ -64,7 +71,8 @@
 					</g>
 				</svg>
 			</a>
-			<a class="header__sattelite hover-btn">
+
+			<a class="header__sattelite mobile-none hover-btn">
 				<svg version="1.1" class="btn-icon" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" width="30" height="30"
 				viewBox="0 0 203.556 203.556" style="enable-background:new 0 0 203.556 203.556;" xml:space="preserve">
 				<title>Супутник</title>
@@ -86,7 +94,12 @@
 				 c-4.707-4.707-7.299-10.965-7.299-17.622c0-4.142-3.357-7.5-7.5-7.5h0c-4.142,0-7.5,3.358-7.5,7.5
 				 c-0.001,10.663,4.152,20.688,11.693,28.229C48.656,169.981,58.682,174.133,69.346,174.133z"/>
 		 </g>
-		 </svg>
+		 		</svg>
+			</a>
+			<a class="header__map-icon mobile-none hover-btn">
+				<svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" class="bi bi-map" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+				</svg>
 			</a>
 			<a class="header__btn-dark-light pointer hover-btn">
 				<div class="header__shadow-light light-icon"></div>
@@ -107,62 +120,154 @@
 			</a>
 			<nav class="header__block-more">
 				<ul>
+					<a id="MapLight" class="header__map-light pointer hover-btn">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="bi bi-lightbulb-fill btn-icon" viewBox="0 0 16 16">
+							<title>Карта відключень світла</title>
+							<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+						</svg>
+					</a>
+					<a id="Punkts" class="header__punkty-nezlamnosty pointer hover-btn">
+						<svg class="header__icon-punkty-nezlamnosty btn-icon bi bi-geo-alt-fill" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 16 16">
+							<title>Пункти незламності</title>
+							<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+						</svg>
+					</a>
+					<a id="Shelters" class="header__map-shelters pointer hover-btn">
+						<svg version="1.0" class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  viewBox="0 0 1280.000000 1194.000000">
+							<title>Карта укриттів</title>
+							<g transform="translate(0.000000,1194.000000) scale(0.100000,-0.100000)"
+							fill="#ffffff" stroke="none">
+							<path d="M3075 11863 c-622 -387 -1140 -833 -1582 -1363 -925 -1106 -1440
+							-2454 -1489 -3900 l-7 -200 2241 0 2242 0 0 45 c0 234 89 587 206 815 160 313
+							417 597 695 766 l60 36 -33 58 c-196 345 -2204 3819 -2208 3819 -3 -1 -59 -34
+							-125 -76z"/>
+							<path d="M9534 11832 c-33 -59 -533 -927 -1112 -1929 -579 -1003 -1053 -1827
+							-1054 -1832 -2 -5 43 -40 99 -77 378 -255 652 -631 778 -1069 34 -118 62 -286
+							71 -419 l7 -106 2240 0 2240 0 -7 200 c-68 1986 -1022 3787 -2631 4969 -147
+							108 -552 373 -568 371 -1 0 -29 -49 -63 -108z"/>
+							<path d="M6210 7666 c-470 -85 -824 -366 -995 -790 -159 -397 -112 -829 130
+							-1197 63 -95 239 -271 335 -334 224 -148 452 -218 715 -218 165 -1 230 9 380
+							54 207 64 367 161 526 319 144 143 236 288 304 478 237 664 -121 1403 -790
+							1630 -49 17 -124 38 -165 47 -102 22 -344 28 -440 11z"/>
+							<path d="M5436 4731 c-11 -20 -1530 -2652 -1843 -3194 -206 -356 -376 -654
+							-379 -661 -7 -17 76 -67 311 -186 731 -370 1474 -583 2326 -667 249 -24 844
+							-24 1098 1 845 81 1594 296 2326 666 235 119 318 169 311 186 -4 11 -1949
+							3386 -2168 3762 l-60 103 -53 -30 c-82 -47 -251 -116 -363 -149 -175 -53 -334
+							-75 -532 -76 -320 -1 -588 60 -864 199 -58 29 -108 50 -110 46z"/>
+							</g>
+						</svg>
+					</a>
+					<a class="header__sattelite hover-btn">
+						<svg version="1.1" class="btn-icon" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" width="30" height="30"
+						viewBox="0 0 203.556 203.556" style="enable-background:new 0 0 203.556 203.556;" xml:space="preserve">
+						<title>Супутник</title>
+				 <g>
+					 <path d="M201.359,137.3l-43.831-43.831l11.453-11.452c1.407-1.407,2.197-3.314,2.197-5.304c0-1.989-0.79-3.896-2.197-5.304
+						 l-36.835-36.834c-2.929-2.928-7.677-2.928-10.606,0l-11.452,11.452L66.253,2.196c-2.93-2.928-7.678-2.928-10.606,0L18.813,39.03
+						 c-2.929,2.93-2.929,7.678,0,10.607l43.831,43.831l-11.453,11.452c-1.407,1.407-2.197,3.314-2.197,5.304s0.79,3.896,2.197,5.304
+						 l36.837,36.836c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196l11.453-11.453l43.83,43.83
+						 c1.465,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196l36.835-36.834c1.407-1.407,2.197-3.314,2.197-5.304
+						 C203.556,140.614,202.766,138.707,201.359,137.3z M34.723,44.334L60.95,18.107l38.53,38.526L82.314,73.799l-9.063,9.063
+						 L34.723,44.334z M93.331,136.454l-26.23-26.229l11.448-11.447c0.002-0.002,0.003-0.003,0.005-0.005l12.443-12.443l35.845-35.844
+						 l26.229,26.228l-11.446,11.446c-0.003,0.003-0.005,0.005-0.007,0.007l-18.417,18.418L93.331,136.454z M159.221,168.831
+						 l-38.527-38.526l26.229-26.229l38.527,38.527L159.221,168.831z"/>
+					 <path d="M72.344,188.555c-15.317,0.001-29.717-5.964-40.548-16.795C20.965,160.929,15,146.528,15,131.211
+						 c0-4.143-3.358-7.5-7.5-7.5c-4.143,0-7.5,3.358-7.5,7.5c0,19.324,7.526,37.491,21.189,51.155
+						 c13.663,13.664,31.829,21.189,51.152,21.189c0.001,0,0.002,0,0.004,0c4.142,0,7.499-3.358,7.499-7.5
+						 C79.845,191.912,76.486,188.555,72.344,188.555z"/>
+					 <path d="M69.346,174.133c4.142,0,7.5-3.357,7.5-7.5c0-4.143-3.358-7.5-7.5-7.5c-6.658,0-12.916-2.593-17.624-7.3
+						 c-4.707-4.707-7.299-10.965-7.299-17.622c0-4.142-3.357-7.5-7.5-7.5h0c-4.142,0-7.5,3.358-7.5,7.5
+						 c-0.001,10.663,4.152,20.688,11.693,28.229C48.656,169.981,58.682,174.133,69.346,174.133z"/>
+				 </g>
+						 </svg>
+					</a>
+					<a class="header__map-icon hover-btn">
+						<svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" class="bi bi-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+						</svg>
+					</a>
 					<a href="#" target="_blank"><span>Про "Карту відключень світла Рівного"</span></a>
 					<a href="#" target="_blank"><span>Невірна інформація?</span></a>
-					<a href="#" target="_blank"><span>Допоможіть покращити карту</span></a>
+					<!-- <a href="#" target="_blank"><span>Допоможіть покращити карту</span></a> -->
 				</ul>
 			</nav>
 		</div>
 	</header>
-		
+	<div class="time-blocks">
 		<div class="time-block time-block_1">
-			<h1 class="time-block__title">Графік відключень світла</h1>
-			<table class="time-block__table">
-				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
-					<td>07:00 - 11:00</td>
-					<td>11:00 - 15:00</td>
-					<td>15:00 - 19:00</td>
-					<td>19:00 - 23:00</td>
-				</tr>
-				<tr>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-				</tr>
-			</table>
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
+			<h1 class="time-block__title">Графік відключень світла - Блок №1</h1>
+			<div class="time-block__flex-box">
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">23:00 - 03:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">03:00 - 07:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">07:00 - 11:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">11:00 - 15:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">15:00 - 19:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">19:00 - 23:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+			</div>
 		</div>
 		<div class="time-block time-block_2">
-			<h1 class="time-block__title">Графік відключень світла</h1>
-			<table class="time-block__table">
-				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
-					<td>07:00 - 11:00</td>
-					<td>11:00 - 15:00</td>
-					<td>15:00 - 19:00</td>
-					<td>19:00 - 23:00</td>
-				</tr>
-				<tr>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-					<td><img src="img/lightbulb.svg" alt="light-on"></td>
-					<td><img src="img/lightbulb-off.svg" alt="light-off"></td>
-				</tr>
-			</table>
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
+			<h1 class="time-block__title">Графік відключень світла - Блок №2</h1>
+			<div class="time-block__flex-box">
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">23:00 - 03:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">03:00 - 07:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">07:00 - 11:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">11:00 - 15:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">15:00 - 19:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb.svg" alt="light-on">
+				</div>
+				<div class="time-block__mini-flex-box">
+					<h4 class="time-block__times">19:00 - 23:00</h4>
+					<img class="time-block__lamp-icon" src="img/lightbulb-off.svg" alt="light-off">
+				</div>
+			</div>
 		</div>
 		<div class="time-block time-block_3">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -179,11 +284,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_4">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -200,11 +309,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_5">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -221,11 +334,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_6">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -242,11 +359,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_7">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -263,11 +384,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_8">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -284,11 +409,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_9">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -305,11 +434,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_10">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -326,11 +459,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_11">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -347,11 +484,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_12">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -368,11 +509,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_13">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -389,11 +534,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_14">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -410,11 +559,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_15">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -431,11 +584,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_16">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -452,11 +609,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_17">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -473,11 +634,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_18">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -494,11 +659,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_19">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -515,11 +684,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_20">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -536,11 +709,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_21">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -557,11 +734,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_22">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -578,11 +759,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_23">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -599,11 +784,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_24">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -620,11 +809,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_25">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -641,11 +834,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_26">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -662,11 +859,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_27">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -683,11 +884,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_28">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -704,11 +909,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_29">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -725,11 +934,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_30">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -746,11 +959,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_31">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -767,11 +984,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_32">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -788,11 +1009,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_33">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -809,11 +1034,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_34">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -830,11 +1059,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_35">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -851,11 +1084,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_36">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -872,11 +1109,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_37">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -893,11 +1134,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_38">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -914,11 +1159,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_39">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -935,11 +1184,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_40">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -956,11 +1209,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_41">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -977,11 +1234,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_42">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -998,11 +1259,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_43">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1019,11 +1284,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_44">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1040,11 +1309,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_45">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1061,11 +1334,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_46">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1082,11 +1359,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_47">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1103,11 +1384,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_48">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1124,11 +1409,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_49">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1145,11 +1434,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_50">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1166,11 +1459,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_51">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1187,11 +1484,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_52">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1208,11 +1509,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_53">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1229,11 +1534,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_54">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1250,11 +1559,15 @@
 			</table>
 		</div>
 		<div class="time-block time-block_55">
+			<button class="time-block__hide">
+				<img src="img/x-circle.svg" alt="close">
+			</button>
 			<h1 class="time-block__title">Графік відключень світла</h1>
+			<h4 class="time-block__description">Блок №1</h4>
 			<table class="time-block__table">
 				<tr>
-					<td>23.00 - 03.00</td>
-					<td>03.00 - 07.00</td>
+					<td>23:00 - 03:00</td>
+					<td>03:00 - 07:00</td>
 					<td>07:00 - 11:00</td>
 					<td>11:00 - 15:00</td>
 					<td>15:00 - 19:00</td>
@@ -1270,7 +1583,6 @@
 				</tr>
 			</table>
 		</div>
-		
 	</div>
 
 	<div class="alerts-map">
@@ -1479,23 +1791,57 @@
 			$('.alert-btn,.hide__1').click(function(event){
 				$('.alerts-map,.hide__1').toggleClass('active');
 			});
-		});
-		$(document).ready(function() {
+			$('.time-block__hide').click(function(event){
+				$('.time-block').toggleClass('hide');
+			});
 			$('.header__info-icon,.hide__2').click(function(event){
 				$('.header__block-more,.hide__2').toggleClass('active');
 			});
-		});
-		$(document).ready(function() {
+			$('.header__sattelite,.header__map-icon').click(function(event){
+				$('.header__sattelite,.header__map-icon').toggleClass('active');
+			});
 			$('.header__btn-search').click(function(event){
 				$('.search-input').toggleClass('active');
 			});
-		});
-		$(document).ready(function() {
 			$('.header__btn-dark-light').click(function(event){
 				$('.dark-icon,.light-icon').toggleClass('active');
-				$('.header,.search-input,.alerts-map,.header__block-more').toggleClass('dark-mode')
+				$('.header,.search-input,.alerts-map,.header__block-more,.time-block').toggleClass('dark-mode')
+			});
+			$('.header__punkty-nezlamnosty').click(function(event){
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('sheltersActive lightActive');
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('punktsActive');
+			});
+			$('.header__map-shelters').click(function(event){
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('punktsActive lightActive');
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('sheltersActive');
+			});
+			$('.header__map-light').click(function(event){
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('sheltersActive punktsActive');
+				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('lightActive');
 			});
 		});
+		
+
+		// $(document).ready(function() {
+		// 	$('.header__punkty-nezlamnosty,.header__map-light_1').click(function(event){
+		// 		$('.header__punkty-nezlamnosty,.header__map-light_1').removeClass('normal');
+		// 		$('.header__punkty-nezlamnosty,.header__map-light_1').toggleClass('active');
+		// 	});
+		// });
+		// $(document).ready(function() {
+		// 	$('.header__map-shelters,.header__map-light_2').click(function(event){
+		// 		$('.header__map-shelters,.header__map-light_2').toggleClass('active');
+		// 		$('.header__map-light_1,.header__punkty-nezlamnosty').toggleClass('normal');
+		// 	});
+		// });
+		// $(document).ready(function() {
+		// 	$('.baton.new').click(function(event){
+		// 		$('.baton.new').toggleClass('active');
+		// 	});
+		// });
 	</script>
+
+	<!-- <script src="js/punkty-nezlamnosty.js"></script> -->
+	<!-- <script src="js/map-shelter.js"></script> -->
 </body>
 </html>
