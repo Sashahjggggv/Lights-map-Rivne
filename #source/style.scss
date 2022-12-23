@@ -5,6 +5,20 @@
 
 body {font-family: 'Lato', sans-serif;}
 
+*::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: none;
+}
+*::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	margin-right: 10px;
+  background-image: linear-gradient(to bottom, rgb(255, 132, 0), rgb(238, 0, 255));
+}
+
+
 .map {
 	width: 100%;
 	height: 100%;
@@ -151,5 +165,46 @@ body {font-family: 'Lato', sans-serif;}
 			font-size: 14px;
 			bottom: 10px;
 		}
+	}
+}
+
+.page-info {
+	display: none;
+	&.active {display: block;}
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	z-index: 10;
+	transform: translateX(-50%);
+	width: 98%;
+	height: 85%;
+	// max-height: 550px;
+	border-radius: 10px;
+	background: rgba(47, 47, 162, 0.9);
+	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
+	&__wrapper {
+		position: absolute;
+		top: 51.8%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 100%;
+		height: 94%;
+		overflow: auto;
+		display: flex;
+		justify-content: center;
+	}
+	&__content {
+		width: 96%;
+		max-width: 1000px;
+	}
+	&__hide {
+		background: none;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		z-index: 2;
+	}
+	@media (max-width:767px) {
+		height: 88%;
 	}
 }
