@@ -2,6 +2,7 @@
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=	&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -277,6 +278,7 @@ svg.btn-icon {
   position: relative;
   margin-bottom: 6px;
   align-items: center;
+  cursor: pointer;
 }
 .header__block-more a svg {
   position: absolute;
@@ -774,6 +776,7 @@ body {
   width: 98%;
   height: 85%;
   border-radius: 10px;
+  transition: all 0.5s ease;
   background: rgba(47, 47, 162, 0.9);
 }
 .page-info.active {
@@ -803,6 +806,61 @@ body {
   top: 5px;
   right: 5px;
   z-index: 2;
+}
+.page-info__image-more {
+  transition: all 0.2s ease;
+}
+.page-info__image-more.active {
+  transform: rotate(135deg);
+}
+.page-info__block-info {
+  padding: 5px 20px;
+  margin-bottom: 25px;
+  background: #7393B3;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50px;
+}
+.page-info__block-info.active {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.page-info__block-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.page-info__info-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 20px;
+}
+.page-info__info-paragraf {
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+.page-info__info-paragraf a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.page-info__info-paragraf a:hover {
+  text-decoration: underline;
+}
+.page-info__info-paragraf span.page-info__logo {
+  font-family: "Rubik 80s Fade";
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .page-info {

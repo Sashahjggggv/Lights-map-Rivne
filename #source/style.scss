@@ -2,6 +2,7 @@
 @import '_style-header.scss';
 @import '_style-searchLine.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=	&display=swap');
 
 body {font-family: 'Lato', sans-serif;}
 
@@ -178,10 +179,10 @@ body {font-family: 'Lato', sans-serif;}
 	transform: translateX(-50%);
 	width: 98%;
 	height: 85%;
-	// max-height: 550px;
 	border-radius: 10px;
-	background: rgba(47, 47, 162, 0.9);
-	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
+	transition: all 0.5s ease;
+  background: rgba(47, 47, 162, 0.9);
+  &.dark-mode {background: rgba(11, 12, 16, 0.9);}
 	&__wrapper {
 		position: absolute;
 		top: 51.8%;
@@ -203,6 +204,58 @@ body {font-family: 'Lato', sans-serif;}
 		top: 5px;
 		right: 5px;
 		z-index: 2;
+	}
+
+	&__image-more {
+		transition: all 0.2s ease;
+		&.active {
+			transform: rotate(135deg);
+		}
+	}
+
+	&__block-info {
+		padding: 5px 20px;
+		margin-bottom: 25px;
+		background: #7393B3;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 50px;
+		&.active {height: fit-content;}
+	}
+
+	&__block-title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+	
+	&__info-title {
+		color: #fff;
+		font-size: 20px;
+		font-weight: 600;
+		margin: 10px 20px;
+	}
+	&__info-paragraf {
+		color: #fff;
+		margin-bottom: 15px;
+		font-family: 'Poppins', sans-serif;
+		font-size: 16px;
+		line-height: 20px;
+		& a {
+			font-family: 'Poppins', sans-serif;
+			font-size: 16px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		& span.page-info__logo {
+			font-family: 'Rubik 80s Fade';
+			text-transform: uppercase;
+			font-size: 20px;
+			color: #fff;
+			user-select: none;
+			cursor: pointer;
+		}
 	}
 	@media (max-width:767px) {
 		height: 88%;
