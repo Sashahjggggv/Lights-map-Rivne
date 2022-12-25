@@ -2,7 +2,7 @@
 @import '_style-header.scss';
 @import '_style-searchLine.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=	&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {font-family: 'Lato', sans-serif;}
 
@@ -154,6 +154,7 @@ body {font-family: 'Lato', sans-serif;}
 		display: flex;
 		align-items: center;
 		margin-top: 5px;
+		cursor: pointer;
 	}
 
 	&__arrow-img {

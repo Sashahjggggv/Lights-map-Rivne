@@ -2,7 +2,7 @@
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=	&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -751,6 +751,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 5px;
+  cursor: pointer;
 }
 .time-block__arrow-img {
   margin-right: 5px;
