@@ -46,11 +46,11 @@ body {font-family: 'Lato', sans-serif;}
 	left: 10px;
 	z-index: 5;
 	width: 600px;
-	height: 200px;
+	height: fit-content;
 	color: #fff;
 	display: none;
 	border-radius: 10px;
-	padding: 20px;
+	padding: 20px 20px 120px 20px;
 	transition: all 0.5s ease;
   background: rgba(47, 47, 162, 0.9);
   &.dark-mode {background: rgba(11, 12, 16, 0.9);}
@@ -138,6 +138,20 @@ body {font-family: 'Lato', sans-serif;}
 			display: none;
 		}
 	}
+	&__detail-info {
+		display: none;
+		background: #7393B3;
+		padding: 10px;
+		border-radius: 10px;
+		&.active {
+			display: block;
+		}
+		& p {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 18px;
+		}
+	}
 
 	&.hide {
 		display: none;
@@ -183,9 +197,8 @@ body {font-family: 'Lato', sans-serif;}
 		bottom: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 98%;	
-		height: 155px;
-		padding: 10px;
+		width: 98%;
+		padding: 10px 10px 110px 10px;
 
 		&__flex-box {
 			height: 80px;
