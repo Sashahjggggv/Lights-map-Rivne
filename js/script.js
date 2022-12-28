@@ -2821,6 +2821,8 @@ function initMap() {
 		zones.forEach(function(element, index){
 			element.setMap(map);
 			element.addListener("click", () => {
+				$('.map-light-hint').toggleClass('none');
+				$('.header__update-time').addClass('none');
 				$('.time-block').removeClass('active hide');
 				$('.time-block_' + index).toggleClass('active');
 				zones.forEach(function(element){

@@ -13,6 +13,7 @@
 
 	<!-- header -->
 	<header class="header">
+		<h2 class="header__update-time">Інформація оновлена 18.12, 20:13</h2>
 		<h1 title="Засновник" class="logo header__logo">ALEX</h1>
 		<button class="header__block-alarm-anable pointer alert-btn" title="Карта тривог">
 			<h4 class="header__alert-text">Тривога</h4>
@@ -2965,6 +2966,7 @@
 	</div>
 
 	<div class="about-alerts-map">
+		<img src="img/x-circle.svg" alt="close" class="about-alerts-map__close">
 		<div class="about-alerts-map__line"><img class="about-alerts-map__image" src="img/vault_bombs.svg" alt="bomb"><p class="about-alerts-map__paragraf"> - Бомбосховища</p></div>
 		<div class="about-alerts-map__line"><img class="about-alerts-map__image" src="img/vault_nuclear.svg" alt="nuclear"><p class="about-alerts-map__paragraf"> - Протирадіаційні укриття</p></div>
 	</div>
@@ -2985,6 +2987,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="map-light-hint">
+		<p class="map-light-hint__paragraf">Оберіть область</p>
+		<img src="img/x-circle.svg" alt="close" class="map-light-hint__close">
 	</div>
 
 	<div class="page-info page-about-map">
@@ -3061,6 +3068,7 @@
 			$('.alert-btn').click(function(event){
 				$('.search-input,.header__block-more,.page-uncorrect-info,.page-about-map').removeClass('active');
 				$('.alerts-map').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.time-block__hide').click(function(event){
 				$('.time-block').toggleClass('hide');
@@ -3092,40 +3100,65 @@
 			$('.header__info-icon').click(function(event){
 				$('.search-input,.alerts-map,.page-uncorrect-info,.page-about-map').removeClass('active');
 				$('.header__block-more').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.header__sattelite,.header__map-icon').click(function(event){
 				$('.header__sattelite,.header__map-icon').toggleClass('active');
+				$('.header__update-time').addClass('none');
+				$('.map-light-hint').toggleClass('none');
+			});
+			$('.map-light-hint__close').click(function(event){
+				$('.map-light-hint').toggleClass('none');
 			});
 			$('.time-block__show-hide').click(function(event){
 				$('.time-block__arrow-img,.time-block__btn-more,.time-block__btn-hide').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.header__btn-search').click(function(event){
 				$('.header__block-more,.alerts-map,.page-uncorrect-info,.page-about-map').removeClass('active');
 				$('.search-input').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.header__btn-dark-light').click(function(event){
 				$('.dark-icon,.light-icon').toggleClass('active');
 				$('.header,.search-input,.alerts-map,.header__block-more,.time-block,.page-info').toggleClass('dark-mode')
+				$('.header__update-time').addClass('none');
 			});
 			$('.header__punkty-nezlamnosty').click(function(event){
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('sheltersActive lightActive');
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('punktsActive');
+				$('.about-alerts-map').removeClass('active');
+				$('.header__block-more').removeClass('active');
+				$('.header__update-time').addClass('none');
+				$('.map-light-hint').toggleClass('none');
 			});
 			$('.header__map-shelters').click(function(event){
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('punktsActive lightActive');
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('sheltersActive');
+				$('.about-alerts-map').addClass('active');
+				$('.header__block-more').removeClass('active');
+				$('.header__update-time').addClass('none');
+				$('.map-light-hint').toggleClass('none');
+			});
+			$('.about-alerts-map__close').click(function(event){
+				$('.about-alerts-map').removeClass('active');
 			});
 			$('.header__map-light').click(function(event){
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').removeClass('sheltersActive punktsActive');
 				$('.header__map-light,.header__punkty-nezlamnosty,.header__map-shelters').toggleClass('lightActive');
+				$('.about-alerts-map').removeClass('active');
+				$('.header__block-more').removeClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.btn-uncorrect-info,.hide-uncorrect').click(function(event){
 				$('.header__block-more,.alerts-map,.search-input,.page-about-map').removeClass('active');
 				$('.page-uncorrect-info').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 			$('.btn-about-map,.hide-about').click(function(event){
 				$('.header__block-more,.alerts-map,.search-input,.hide-uncorrect-info').removeClass('active');
 				$('.page-about-map').toggleClass('active');
+				$('.header__update-time').addClass('none');
 			});
 		});
 	</script>
