@@ -44,7 +44,7 @@ svg.btn-icon {
 	top: 10px;
 	left: 10px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: end;
 	align-items: center;
 	user-select: none;
 	padding: 15px 20px 15px 140px;
@@ -289,22 +289,6 @@ svg.btn-icon {
 		&__alarm-disable-text {display: none;}
 	}
 }
-
-.mobile-first-btn {
-	@media (min-width:767px) {
-		display: none !important;
-	}
-}
-
-.mobile-none {
-	@media (max-width:767px) {
-		display: none !important;
-	}
-}
-
-// .mobile-default-none {
-// 	display: none !important;
-// }
 
 .alerts-map {
 	position: absolute;

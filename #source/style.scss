@@ -252,12 +252,33 @@ body {font-family: 'Lato', sans-serif;}
 		&.active {
 			transform: rotate(135deg);
 		}
-		&_4, &_6 {
+		&_4, &_3 {
 			transform: rotate(135deg);
 			&.active {
 				transform: rotate(0deg);
 			}
 		}
+	}
+
+	&__contact-link {
+		display: inline-flex;
+		align-items: center;
+		color: #2f2fa2;
+		width: fit-content;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		& img {
+			fill: #2f2fa2;
+			margin-right: 10px;
+		}
+	}
+
+	&__block-links { 
+		display: flex;
 	}
 
 	&__block-info {
@@ -266,8 +287,6 @@ body {font-family: 'Lato', sans-serif;}
 		background: #7393B3;
 		border-radius: 10px;
 		overflow: hidden;
-		// height: 50px;
-		// &.active {height: fit-content;}
 	}
 
 	&__block-title {
@@ -357,9 +376,8 @@ body {font-family: 'Lato', sans-serif;}
 	left: 10px;
 	z-index: 2;
 	height: 40px;
-	width: 160px;
 	align-items: center;
-	padding: 10px 40px 10px 10px;
+	padding: 10px;
 	border-radius: 10px;
 	display: flex;
 	background: rgba(47, 47, 162, 0.9);
@@ -377,5 +395,62 @@ body {font-family: 'Lato', sans-serif;}
 		color: #fff;
 		white-space: nowrap;
 		margin-right: 10px;
+	}
+}
+
+.punkts-hint {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	z-index: 2;
+	height: 40px;
+	align-items: center;
+	padding: 10px;
+	border-radius: 10px;
+	display: none;
+	background: rgba(47, 47, 162, 0.9);
+	transition: all 0.5s ease;
+	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
+	&.active {display: flex;}
+
+	&__paragraf {
+		color: #fff;
+		white-space: nowrap;
+		margin-right: 10px;
+	}
+
+	&__close {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.block-about-me {
+	position: fixed;
+	top: 90px;
+	left: 10px;
+	z-index: 10;
+	width: 70%;
+	padding: 20px;
+	display: none;
+  background: rgba(47, 47, 162, 0.9);
+	border-radius: 10px;
+	transition: all 0.5s ease;
+	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
+	&.active {display: block;}
+	&__title {
+
+	}
+
+	&__logo {
+		font-family: 'Rubik 80s Fade';
+		text-transform: uppercase;
+		font-size: 20px;
+		color: #fff;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	&__paragraf {
 	}
 }
