@@ -5,6 +5,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Карта відключень світла в м.Рівне, карта укриттів, пункти незламності.">
+	<meta name="keywords" content="графік відключень світла рівне, карта відключень світла рівне, графік відключень світла, карта відключень світла, alex, alex рівне, алекс, графік рівне, карта рівне, світло рівне, пункти незламності рівне, пункти незламності, укриття рівне, укриття, карта укриттів рівне, бомбосховища рівне, пункти обігріву рівне, пункти обігріву, карта.">
+	<meta name="Author" content="Гордійчук Олександр">
+	<meta name="Copyright" content="Гордійчук Олександр">
+	<meta name="Address" content="вулиця Академіка Грушевського, 81, Рівне, Рівненська область, 33000">
+	<meta property="og:locale" content="">
 	<title>Карта відключень світла Рівного</title>
 </head>
 <body>
@@ -2732,6 +2738,7 @@
 	</div>
 
 	<div class="block-about-me">
+		<img src="img/x-circle.svg" alt="close" class="block-about-me__close">
 		<h1 class="block-about-me__title"><span class="block-about-me__logo">ALEX</span> - Гордійчук Олександр</h1>
 		<p class="block-about-me__paragraf"></p>
 		<p class="block-about-me__paragraf"></p>
@@ -2746,11 +2753,10 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('.logo').click(function(event){
-				$('.block-about-me').addClass('active');
+			$('.logo,.block-about-me__close').click(function(event){
+				$('.block-about-me').toggleClass('active');
 				$('.page-about-map').removeClass('active');
 				$('.header__update-time').addClass('none');
-				$('.block-about-me').removeClass('active');
 			});
 			$('.time-block__hide').click(function(event){
 				$('.time-block').toggleClass('hide');

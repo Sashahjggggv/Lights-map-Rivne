@@ -438,8 +438,19 @@ body {font-family: 'Lato', sans-serif;}
 	transition: all 0.5s ease;
 	&.dark-mode {background: rgba(11, 12, 16, 0.9);}
 	&.active {display: block;}
-	&__title {
 
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 22px;
+		height: 22px;
+		cursor: pointer;
+	}
+
+	&__title {
+		font-size: 18px;
+		color: #fff;
 	}
 
 	&__logo {
@@ -451,6 +462,6 @@ body {font-family: 'Lato', sans-serif;}
 		cursor: pointer;
 	}
 
-	&__paragraf {
-	}
+	// &__paragraf {
+	// }
 }

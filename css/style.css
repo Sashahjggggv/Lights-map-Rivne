@@ -1054,6 +1054,18 @@ body {
 .block-about-me.active {
   display: block;
 }
+.block-about-me__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.block-about-me__title {
+  font-size: 18px;
+  color: #fff;
+}
 .block-about-me__logo {
   font-family: "Rubik 80s Fade";
   text-transform: uppercase;
